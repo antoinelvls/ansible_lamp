@@ -1,1 +1,22 @@
 ---
+- hosts: host_db
+  tasks:
+    - name: Installation mysql
+      become: true
+      apt:
+        name: mysql-server
+        state: latest
+
+
+     - name: Creation de la base de donnée
+    community.mysql.mysql_db:
+    name: gabrielcompany
+    state: present
+
+
+    - name: Creation user de la base de donnée
+  community.mysql.mysql_user:
+    name: root
+    password: 1234
+    priv: '*.*:ALL'
+    state: present

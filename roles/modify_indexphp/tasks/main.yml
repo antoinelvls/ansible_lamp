@@ -1,0 +1,9 @@
+---
+- host : host_web
+  remote_user : root
+  task: 
+
+   - name: Copie de mon fichier variable 
+     template:
+     src: /home/azureuser/....
+     dest: /var/www/html/index.php

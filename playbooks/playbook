@@ -1,0 +1,9 @@
+---
+- hosts: host_db host_web
+  remote_user: root
+  
+  roles:
+          - { role: install_php }
+          - { role: install_apache }
+          - { role: install_mysql }
+

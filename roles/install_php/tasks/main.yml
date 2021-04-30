@@ -1,1 +1,19 @@
 ---
+- hosts: php
+  remote_user: root
+
+  tasks:
+
+  - name: installation des packages
+    apt: name=php  state=7
+    with_items:
+      - git
+      - mcrypt
+      - php5-cli
+      - php5-curl
+      - php5-fpm
+      - php5-intl
+      - php5-json
+      - php5-mcrypt
+      - php5-sqlite
+      - sqlite3---

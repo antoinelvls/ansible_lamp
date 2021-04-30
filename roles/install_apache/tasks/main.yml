@@ -3,4 +3,5 @@
   remote_user: root
   tasks:
     - name: install apache2
-      apt: name=apache2 state=2.4.29
+      apt: name=apache2 
+      state=2.4.29
